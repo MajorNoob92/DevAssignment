@@ -4,17 +4,20 @@
 
 //First input provided by this scary puzzle. Make it look pretty with the following.
 $clientInput = "1122";
-echo 'The total sum for ' . $clientInput . ' is: ' . CalculateInverseCaptchaTotal($clientInput) . "\n\n";
+echo 'The total sum for "' . $clientInput . '" is: ' . CalculateInverseCaptchaTotal($clientInput) . "\n";
+echo 'Total should be 3' . "\n\n";
 
 $clientInput = "1111";
-echo 'The total sum for ' . $clientInput . ' is: ' . CalculateInverseCaptchaTotal($clientInput) . "\n\n";
+echo 'The total sum for "' . $clientInput . '" is: ' . CalculateInverseCaptchaTotal($clientInput) . "\n";
+echo 'Total should be 4' . "\n\n";
 
 $clientInput = "1234";
-echo 'The total sum for ' . $clientInput . ' is: ' . CalculateInverseCaptchaTotal($clientInput) . "\n\n";
+echo 'The total sum for "' . $clientInput . '" is: ' . CalculateInverseCaptchaTotal($clientInput) . "\n";
+echo 'Total should be 0' . "\n\n";
 
 $clientInput = "91212129";
-echo 'The total sum for ' . $clientInput .  ' is: ' . CalculateInverseCaptchaTotal($clientInput) . "\n\n";
-
+echo 'The total sum for "' . $clientInput .  '" is: ' . CalculateInverseCaptchaTotal($clientInput) . "\n";
+echo 'Total should be 9' . "\n\n";
 
 
 function CalculateInverseCaptchaTotal(string $clientInput)
@@ -32,7 +35,7 @@ function CalculateInverseCaptchaTotal(string $clientInput)
 
 //ok here comes the loop. Make sure the ArrayIndex starts at 0. As long as the ArrayIndex value is less than the $clientInputLength the script will continue to loop.
 
-    for ($arrayIndex = 0; $arrayIndex < $clientInputLength; $arrayIndex++) {
+    for($arrayIndex = 0; $arrayIndex < $clientInputLength; $arrayIndex++) {
 
         //it is recommended to convert the string value to an Integer
         $currentValue = (int)$clientInput[$arrayIndex];
@@ -67,4 +70,3 @@ function CalculateInverseCaptchaTotal(string $clientInput)
     }
 }
 
-?>
