@@ -35,7 +35,7 @@ function CalculateInverseCaptchaTotal(string $clientInput)
 
 //ok here comes the loop. Make sure the ArrayIndex starts at 0. As long as the ArrayIndex value is less than the $clientInputLength the script will continue to loop.
 
-    for($arrayIndex = 0; $arrayIndex > $clientInputLength; $arrayIndex++) {
+    for($arrayIndex = 0; $arrayIndex < $clientInputLength; $arrayIndex++) {
 
         //it is recommended to convert the string value to an Integer
         $currentValue = (int)$clientInput[$arrayIndex];
@@ -64,9 +64,8 @@ function CalculateInverseCaptchaTotal(string $clientInput)
             //if the current and next values do not match, do nothing.
             echo 'Meh, didnt match' . "\n";
         }
-
-
-        return $InverseCaptchaTotal;
     }
+
+    return $InverseCaptchaTotal;
 }
 
