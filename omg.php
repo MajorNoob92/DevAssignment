@@ -22,18 +22,18 @@ echo 'Total should be 9' . "\n\n";
 
 function CalculateInverseCaptchaTotal(string $clientInput)
 {
-//Always make sure you start your value with a zero. Doesn't help we have random numbers interfering with our scripty
+    //Always make sure you start your value with a zero. Doesn't help we have random numbers interfering with our scripty
     $InverseCaptchaTotal = 0;
 
-//lets find the length of the input
-//echo strlen($clientInput); //using example '1122' gives the value of 4 here
+    //lets find the length of the input
+    //echo strlen($clientInput); //using example '1122' gives the value of 4 here
 
-//As recommended, provide the function with the input length. It will be required when running the loop. 
+    //As recommended, provide the function with the input length. It will be required when running the loop.
     $clientInputLength = strlen($clientInput);
 
-//echo $clientInputLength; //still gives 4, so whoop. 
+    //echo $clientInputLength; //still gives 4, so whoop.
 
-//ok here comes the loop. Make sure the ArrayIndex starts at 0. As long as the ArrayIndex value is less than the $clientInputLength the script will continue to loop.
+    //ok here comes the loop. Make sure the ArrayIndex starts at 0. As long as the ArrayIndex value is less than the $clientInputLength the script will continue to loop.
 
     for($arrayIndex = 0; $arrayIndex < $clientInputLength; $arrayIndex++) {
 
@@ -53,7 +53,7 @@ function CalculateInverseCaptchaTotal(string $clientInput)
 
         echo $currentValue .'=='. $nextValue . '?';
 
-//need to ask lee about this next part
+        //need to ask lee about this next part
 
         if ($currentValue === $nextValue) {
 
